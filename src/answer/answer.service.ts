@@ -10,8 +10,7 @@ export class AnswerService {
   private readonly prisma: PrismaService;
 
 
-  async create(createAnswerDto: CreateAnswerDto, userId: number) {
-    const questionId = 1;
+  async create(createAnswerDto: CreateAnswerDto, userId: number, questionId: number) {
     const newAnswer={
       body: createAnswerDto.body,
       user: {
